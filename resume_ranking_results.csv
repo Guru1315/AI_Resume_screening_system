@@ -1,0 +1,6 @@
+Rank,Resume,Semantic (BERT),Keyword (TF-IDF),Skill Match %,Final Score,Matched Skills,Missing Skills,Verdict
+1,Aarav_ML_Engineer.txt,76.8,42.4,88.9,70.1,"python, machine learning, deep learning, nlp, tensorflow, pytorch, scikit-learn, pandas, numpy, git, docker, aws, data preprocessing, model evaluation, communication, teamwork","sql, rest api",✅ Strong match
+2,Meera_AI_Student.txt,49.5,20.2,55.6,42.5,"python, machine learning, deep learning, nlp, pytorch, scikit-learn, pandas, numpy, sql, git","tensorflow, docker, aws, rest api, data preprocessing, model evaluation, communication, teamwork",🟡 Moderate match
+3,Diya_Data_Analyst.txt,46.3,11.8,27.8,30.4,"python, pandas, numpy, sql, communication","machine learning, deep learning, nlp, tensorflow, pytorch, scikit-learn, git, docker, aws, rest api, data preprocessing, model evaluation, teamwork",❌ Weak match
+4,Karan_Web_Developer.txt,34.0,4.7,11.1,18.4,"git, docker","python, machine learning, deep learning, nlp, tensorflow, pytorch, scikit-learn, pandas, numpy, sql, aws, rest api, data preprocessing, model evaluation, communication, teamwork",❌ Weak match
+5,Rohit_Accountant.txt,20.6,7.1,11.1,13.7,"communication, teamwork","python, machine learning, deep learning, nlp, tensorflow, pytorch, scikit-learn, pandas, numpy, sql, git, docker, aws, rest api, data preprocessing, model evaluation",❌ Weak match
