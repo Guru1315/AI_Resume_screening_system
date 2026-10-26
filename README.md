@@ -60,21 +60,40 @@ The weights can be changed in the notebook.
 
 ```
 ├── AI_Resume_Screening_System.ipynb   # Main Colab notebook
-├── sample_resumes/                    # Sample PDF resumes for testing
+├── sample resumes/                    # Six sample PDF resumes to upload when testing
+│   └── README.md                      # Who the samples are
 ├── resume_ranking_results.csv         # Example output
 └── README.md
 ```
 
+### Two kinds of sample data
+
+- **Built-in samples.** If you skip the upload cell, the notebook ranks five short text resumes (Aarav, Meera, Diya, Karan, Rohit) that are written into the notebook itself. `resume_ranking_results.csv` is the output of that demo.
+- **Sample PDFs.** The six PDFs in `sample resumes/` are different people. Download them and use the upload cell to try the PDF reading. Their results are not in the CSV.
+
+## 🎯 Default job settings
+
+The notebook comes set up for a **Machine Learning Engineer** role. Change `job_title`, `job_description` and `required_skills` in the job cell to screen for something else.
+
+The default `required_skills` list has 18 entries: python, machine learning, deep learning, nlp, tensorflow, pytorch, scikit-learn, pandas, numpy, sql, git, docker, aws, rest api, data preprocessing, model evaluation, communication, teamwork.
+
+**Verdict thresholds** on the final score: 60 or above is a *Strong match*, 40 to 59.9 is a *Moderate match*, and below 40 is a *Weak match*.
+
 ## 📊 Sample Output
 
-Add your screenshots here after running the notebook:
+`resume_ranking_results.csv` holds the ranking from the built-in demo:
 
-```
-![Ranking chart](images/ranking_chart.png)
-![Score heatmap](images/score_heatmap.png)
-```
+| Rank | Resume | BERT | TF-IDF | Skill match | Final | Verdict |
+|---|---|---|---|---|---|---|
+| 1 | Aarav_ML_Engineer.txt | 76.8 | 42.4 | 88.9 | 70.1 | Strong |
+| 2 | Meera_AI_Student.txt | 49.5 | 20.2 | 55.6 | 42.5 | Moderate |
+| 3 | Diya_Data_Analyst.txt | 46.3 | 11.8 | 27.8 | 30.4 | Weak |
+| 4 | Karan_Web_Developer.txt | 34.0 | 4.7 | 11.1 | 18.4 | Weak |
+| 5 | Rohit_Accountant.txt | 20.6 | 7.1 | 11.1 | 13.7 | Weak |
 
-The results table contains: **Rank, Resume, Semantic (BERT), Keyword (TF-IDF), Skill Match %, Final Score, Matched Skills, Missing Skills, Verdict**.
+The full table also lists each candidate's matched and missing skills. Its columns are: **Rank, Resume, Semantic (BERT), Keyword (TF-IDF), Skill Match %, Final Score, Matched Skills, Missing Skills, Verdict**.
+
+The notebook also draws a ranking bar chart and a score-breakdown heatmap. Screenshots of them are not in the repository yet; run the notebook to see them.
 
 ## ⚠️ Limitations
 
